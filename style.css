@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-light: #FBFBFB;
+    --black-color: #000000;
+    --light-blue: #6B46C1;
+    --ligh-white: #4A5568;
+    --sky-blue: #F7FAFC;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-light);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85vw;
+    margin: 5rem auto;
+    gap: 5rem;   /* Addon Feature  */
+}
+.navbar .logo a{
+    font-size: 5rem;
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 700;
+}
+.navbar .logo a span{
+    color: var(--light-blue);
+}
+.navbar .link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.navbar .link li a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 2.4rem;
+}
+.navbar .link li a img{
+    width: 3rem;
+}
+
+.container{
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem 0;
+}
+.hero-section .text-container h1{
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 7rem;
+    margin-bottom: 1.2rem;
+}
+.hero-section .text-container .mb-heading{
+    display: none;
+}
+.hero-section .text-container h2{
+    color: var(--ligh-white);
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+.hero-section .img-container{
+    width: 55.6em;
+    height: 35.7em;
+}
+.hero-section .img-container img{
+    max-width: 100%;
+    height: auto;
+    padding: 0 1rem;
+}
+
+.card-latest{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 0px  10px rgba(0,0,0,0.1);
+}
+.card-latest .text{
+    padding: 5rem;
+}
+.card-latest h2{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 2rem;
+}
+.card-latest p{
+    font-size: 1.4rem;
+    color: var(--ligh-white);
+    margin-bottom: 1rem;
+}
+.details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10rem;
+}
+.details p b{
+    color: var(--black-color);
+}
+.card-latest .latest-blog-img{
+    /* width: 600px;
+    height: 400px; */
+    width: 100%;
+    /* border: 2px solid red; */
+}
+.card-latest .latest-blog-img img{
+    width: 100%;
+    height: auto;
+}
+.blog-list{
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+.blog-list .blog{
+    box-shadow: 1px 0 2px  var(--ligh-white);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.blog-list .blog img{
+    width: 100%;
+    height: auto;
+}
+
+.blog-list .blog .text{
+    padding: 2rem;
+}
+.blog-list .blog .text h2{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+.blog-list .blog .text p{
+    font-size: 1.4rem;
+    color: var(--ligh-white);
+}
+.blog-list .blog .text .details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+    margin: 2rem 0;
+}
+
+.highlight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--ligh-white);
+    background-color: var(--sky-blue);
+}
+.highlight .text{
+    width: 50%;
+    padding: 5rem 3rem;
+}
+.highlight .text h2{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+    text-transform: capitalize;
+}
+.highlight .text p{
+    color: var(--ligh-white);
+    margin-bottom: 1rem;
+}
+
+.highlight .latest-blog-img{
+    width: 50%;
+    overflow: hidden;
+}
+.highlight .latest-blog-img img{
+    width: 100%;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+button{
+    background-color: var(--light-blue);
+    color: var(--bg-light);
+    padding: 1rem  2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    margin: 3rem 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    font-size: 1.6rem;
+}
+footer .social-link img{
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1024px){
+    .card-latest{
+        flex-direction: column;
+    }
+    .card-latest .text{
+        order: 1;
+    }
+    .blog-list{
+        flex-direction: column;
+    }
+    .card-latest p{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .navbar .logo a{
+        font-size: 2rem;
+    }
+    .navbar .link li a{
+        font-size: 1.6rem;
+    }
+    .navbar .link li a img{
+        width:2rem;
+    }
+    .hero-section{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    .hero-section .text-container{
+        order: 1;
+    }
+    .hero-section .text-container h1{
+        display: none;
+    }
+    .hero-section .text-container .mb-heading{
+        display: block;
+        font-size: 3.6rem;
+        line-height: 3rem;
+    }
+
+    hero-section .text-container .mb-heading{
+        display: block;
+    }
+    .hero-section .img-container{
+        width: 320px;
+        height: 300px;
+    }
+    .highlight{
+        flex-direction: column;
+    }
+    .highlight .text{
+        order: 1;
+        width: 100%;
+    }
+    .highlight .text h2{
+        font-size: 2rem;
+    }
+    .highlight .text .details{
+        font-size: 1.4rem;
+    }
+    .highlight .latest-blog-img{
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 480px){
+    .navbar{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .navbar .logo a{
+        font-size: 4rem;
+    }
+    .hero-section{
+        gap: 2rem;
+    }
+    .hero-section .text-container .mb-heading{
+        font-size: 2.4rem;
+    }
+    .hero-section .text-container h2{
+        font-size: 1.6rem;
+    }
+    .hero-section .img-container{
+        height: 200px;
+    }
+    .highlight .text{
+        font-size: 2rem;
+    }
+    .card-latest .text{
+        padding: 2rem;
+    }
+    .card-latest .details{
+        padding: 1rem;
+        font-size: 1rem;
+        gap: 3rem;
+    }
+    .card-latest .text h2{
+        font-size: 2.4rem;
+    }
+    .highlight .details{
+        gap: 2rem;
+        font-size: 1.6rem;
+    }
+    footer {
+        font-size: 1.2rem;
+    }
+}
